@@ -285,8 +285,8 @@ function App() {
             {!loggedIn ? (
               <>
                 <span className="welcoming">Welcome, Guest!</span>
-                <button onClick={() => setScreen('Login')}>Log In</button>
-                <button onClick={() => setScreen('Register')}>Register</button>
+                <button onClick={() => {setScreen('Login'); setMessage('');}}>Log In</button>
+                <button onClick={() => {setScreen('Register'); setMessage('');}}>Register</button>
               </>
             ) : (
               <>
