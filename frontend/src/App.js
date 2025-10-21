@@ -333,7 +333,7 @@ function App() {
                   </svg>
                   <p className="calorie-msg">
                     {!loggedIn
-                      ? 'Sign in to find your suggested calorie goal!'
+                      ? 'Sign in to save your calorie goal!'
                       : `You have ${Math.max(calorieGoal - caloriesEaten, 0)} calories remaining`}
                   </p>
                   <CalorieEditor calorieGoal={calorieGoal} setCalorieGoal={setCalorieGoal} />
