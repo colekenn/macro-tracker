@@ -200,13 +200,13 @@ function App() {
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Something went wrong');
+      setLoggedIn(true);
       setMessage('');
       setScreen('home');
-      
     } catch (error) {
       setMessage(error.message);
     }
-    setLoggedin(true);
+    
     setUsername('');
     setPassword('');
     setConfirmPassword('');
