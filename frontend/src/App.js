@@ -207,7 +207,7 @@ function App() {
       setMessage(error.message);
     }
     
-    setUsername('');
+    setUsername(username);
     setPassword('');
     setConfirmPassword('');
   }
