@@ -20,4 +20,4 @@ MacroTracker helps users log meals, set and edit calorie goals, and track daily 
 
 ## Running the Project (for development/demo)
 This project is hosted on vercel and render.
-Link: [(https://render-macro.vercel.app/](https://render-macro.vercel.app/)
+Link: [https://render-macro.vercel.app/](https://render-macro.vercel.app/)
