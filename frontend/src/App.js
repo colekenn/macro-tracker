@@ -202,11 +202,11 @@ function App() {
       if (!response.ok) throw new Error(data.error || 'Something went wrong');
       setMessage('');
       setScreen('home');
-      setLoggedin(true);
+      
     } catch (error) {
       setMessage(error.message);
     }
-    
+    setLoggedin(true);
     setUsername('');
     setPassword('');
     setConfirmPassword('');
