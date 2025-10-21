@@ -1,0 +1,503 @@
+body {
+  margin: 0;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  background: #f7faf7;
+  display: flex;
+  flex-direction: column;
+}
+
+main.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(10, 41, 0, 0.8);
+}
+
+
+.main-content .clear-button {
+  margin-top: 20px;  
+  align-self: center; 
+  padding: 8px 16px;
+  border: none;
+  background: #b30000;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.main-content .clear-button:hover {
+  background: #460000;
+}
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.nav-links button:hover {
+  background: white;
+  color: #0a2900;
+}
+
+/* Dashboard styles */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  flex: 1;
+}
+
+/* Top row: calories and log food side-by-side */
+.top-row {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+
+.calorie-card,
+.log-card {
+  flex: 1;
+}
+
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  
+}
+
+.calorie-visual {
+  margin-top: 1rem;
+}
+
+.calorie-msg {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Logged foods bottom box spans full width and grows */
+.logged-foods-box {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* important: let it fill vertically */
+}
+
+.logged-foods-container {
+  flex-grow: 1; /* take all extra vertical space */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+
+
+/* Individual meal section styling */
+.logged-foods-section {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.logged-foods-section h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #0a2900;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3px;
+  font-weight: 600;
+}
+
+.logged-foods-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.logged-foods-section p {
+  font-style: italic;
+  color: #666;
+  margin: 0;
+}
+
+/* Landing page styles */
+.landing-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #e8f5e9, #ffffff);
+}
+
+.landing-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.landing-card-logo {
+  width: 80px;
+  margin-bottom: 0.5rem;
+}
+
+.landing-title {
+  font-size: 2rem;
+  color: #0a2900;
+  margin-bottom: 2rem;
+}
+
+.landing-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.landing-button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #0a2900;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.landing-button:hover {
+  background-color: #145c0a;
+}
+
+.landing-button.secondary {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.landing-button.secondary:hover {
+  background-color: #c2c2c2;
+}
+
+.search-bar {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  width: 250px;
+  border: 1px solid #0a2900;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1.5px solid #0a2900;
+  border-radius: 8px;
+  outline-offset: 2px;
+  outline-color: #0a2900;
+  box-sizing: border-box;
+}
+
+.landing-button, .submitbutton {
+  width: 100%;
+  padding: 0.9rem 0;
+  background-color: #0a2900;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.landing-button:hover, .submitbutton:hover {
+  background-color: #145c0a;
+}
+
+.back-button, .landing-button-guest {
+  width: 100%;
+  padding: 0.9rem 0;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.back-button:hover, .landing-button-guest:hover {
+  background-color: #c2c2c2;
+  opacity: 1;
+}
+
+.message {
+  margin-top: 0.8rem;
+  min-height: 20px;
+  color: #b00020;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.login {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  width: 220px;
+  border: 1px solid #0a2900;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.main-content button {
+  margin: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  background: #0a2900;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.main-content button:hover {
+  background: #145c0a;
+}
+
+@keyframes pulseGlow {
+  0% {
+    filter: drop-shadow(0 0 2px #00ffaa);
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 4px #00ffaa);
+    transform: scale(1.05);
+  }
+  100% {
+    filter: drop-shadow(0 0 2px #00ffaa);
+    transform: scale(1);
+  }
+}
+
+
+.welcoming {
+  font-size: 1.2rem;
+  font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;
+  color: #ffffff;
+  margin-top: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.calorie-counter {
+  margin-bottom: 2rem;
+  background: #e6f0e6;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 300px;
+  margin: 1rem auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.calorie-counter h2 {
+  margin-bottom: 0.5rem;
+  color: #0a2900;
+}
+
+.section {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.calorie-circle {
+  margin: 1rem auto;
+  width: 120px;
+  height: 120px;
+}
+
+.circletext {
+  font-size: 16px;
+  font-weight: bold;
+  fill: #0a2900;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.remember-label {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.remember-label input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+.suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  width: 250px;
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.serving-unit-select{
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1.5px solid #0a2900;
+  border-radius: 8px;
+  outline-offset: 2px;
+  outline-color: #0a2900;
+  box-sizing: border-box;
+  text-align: center;
+}
+.serving-input{
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1.5px solid #0a2900;
+  border-radius: 8px;
+  outline-offset: 2px;
+  outline-color: #0a2900;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.date-picker {
+  
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.date-picker:hover,
+.date-picker:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+
+.date-picker::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(50%);
+}
+
+.log-card{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.delete-food-btn {
+  margin-left: 10px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+}
