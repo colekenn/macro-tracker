@@ -26,7 +26,7 @@ function App() {
 
   const [selectedMeal, setSelectedMeal] = useState('breakfast');
 
-  // ---------- Helpers ----------
+  // --------- Helpers ----------
   async function fetchSuggestions(query) {
     if (!query.trim()) {
       setSuggestions([]);
