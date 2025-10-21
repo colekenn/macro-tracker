@@ -205,7 +205,7 @@ function App() {
     } catch (error) {
       setMessage(error.message);
     }
-    setUsername('');
+    setUsername(username);
     setPassword('');
     setConfirmPassword('');
   }
