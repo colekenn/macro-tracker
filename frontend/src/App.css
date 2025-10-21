@@ -133,11 +133,11 @@ main.main-content {
 
   display: flex;
   flex-direction: column;
-  height: 100%; /* important: let it fill vertically */
+  height: 100%; 
 }
 
 .logged-foods-container {
-  flex-grow: 1; /* take all extra vertical space */
+  flex-grow: 1; 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
@@ -415,10 +415,10 @@ main.main-content {
   margin: 4px 0 8px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
-  max-height: 150px;
+  max-height: 75px;
   overflow-y: auto;
   background-color: white;
-  position: absolute;
+  position: relative;
   z-index: 10;
   width: 250px;
 }
