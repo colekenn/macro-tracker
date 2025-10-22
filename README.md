@@ -1,6 +1,6 @@
 # MacroTracker
 
-A full-stack fitness tracking web application built with **Python (Flask)**, **React **, and **PostgreSQL**.  
+A full-stack fitness tracking web application built with **Python (Flask)**, **React**, and **PostgreSQL**.  
 MacroTracker helps users log meals, set and edit calorie goals, and track daily nutrition progress with a clean, interactive dashboard.
 
 ## Features
